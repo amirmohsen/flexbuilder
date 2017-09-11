@@ -1,0 +1,107 @@
+{
+  "name": "flexbuilder",
+  "version": "0.0.0",
+  "description": "A generic builder",
+  "main": "index.js",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/amirmohsen/flexbuilder.git"
+  },
+  "scripts": {
+    "dev": "babel src --out-dir dist --source-maps --watch",
+    "build": "babel src --out-dir dist",
+    "prepublishOnly": "npm run build"
+  },
+  "files": [
+    "dist"
+  ],
+  "babel": {
+    "presets": [
+      [
+        "env",
+        {
+          "targets": {
+            "node": 6
+          },
+          "useBuiltIns": true
+        }
+      ]
+    ],
+    "plugins": [
+      "syntax-decorators",
+      "transform-decorators-legacy",
+      "transform-class-properties",
+      "transform-object-rest-spread"
+    ]
+  },
+  "keywords": [
+    "flexverse",
+    "build",
+    "webpack",
+    "babel"
+  ],
+  "author": {
+    "name": "Amir Abdolrazaghi",
+    "email": "amir@flexverse.tech"
+  },
+  "license": "UNLICENSED",
+  "engines": {
+    "node": ">= 6.0.0",
+    "npm": ">= 3.0.0"
+  },
+  "bugs": {
+    "url": "https://github.com/amirmohsen/flexbuilder/issues"
+  },
+  "homepage": "https://github.com/amirmohsen/flexbuilder#readme",
+  "dependencies": {
+    "extend": "^3.0.0",
+    "nodemon": "^1.11.0",
+    "portfinder": "^1.0.13"
+  },
+  "devDependencies": {
+    "babel-cli": "^6.24.1",
+    "babel-core": "^6.24.1",
+    "babel-plugin-syntax-decorators": "^6.13.0",
+    "babel-plugin-transform-class-properties": "^6.24.1",
+    "babel-plugin-transform-decorators-legacy": "^1.3.4",
+    "babel-plugin-transform-object-rest-spread": "^6.23.0",
+    "babel-preset-env": "^1.6.0"
+  },
+  "peerDependencies": {
+    "assets-webpack-plugin": "^3",
+    "babel-cli": "^6",
+    "babel-core": "^6",
+    "babel-loader": "^6",
+    "babel-plugin-module-resolver": "^2.5",
+    "babel-plugin-syntax-decorators": "^6",
+    "babel-plugin-transform-class-properties": "^6",
+    "babel-plugin-transform-decorators-legacy": "^1",
+    "babel-plugin-transform-object-rest-spread": "^6",
+    "babel-polyfill": "^6",
+    "babel-preset-env": "^1",
+    "babel-preset-latest-node6": "^0.1",
+    "babel-preset-react": "^6",
+    "babel-preset-react-optimize": "^1",
+    "clean-webpack-plugin": "^0.1",
+    "css-loader": "^0.28",
+    "extract-text-webpack-plugin": "^2",
+    "file-loader": "^0.11",
+    "postcss-cssnext": "^2",
+    "postcss-import": "^9",
+    "postcss-loader": "^1",
+    "postcss-variables-loader": "^2",
+    "progress-bar-webpack-plugin": "^1",
+    "react": "^15",
+    "react-dom": "^15",
+    "react-hot-loader": "^3.0.0-beta.6",
+    "react-svg-loader": "^1",
+    "source-map-loader": "^0.2.1",
+    "source-map-support": "^0.4",
+    "style-loader": "^0.16",
+    "uglifyjs-webpack-plugin": "^0.4",
+    "url-loader": "^0.5",
+    "webpack": "^2",
+    "webpack-dev-server": "^2",
+    "webpack-node-externals": "^1"
+  }
+}
